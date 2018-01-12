@@ -21,7 +21,7 @@ install() {
 		cd ..
 		chmod +x bot
 		chmod +x tg
-		chmod +x autopoinshtan.run
+		chmod +x autopoinshtan.sh
 }
 
 update() {
