@@ -1,4 +1,4 @@
--- #Beyond Reborn Robot
+-- #Poinshtan Bot
 -- #
 
 tdcli = dofile('./tg/tdcli.lua')
