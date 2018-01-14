@@ -86,6 +86,7 @@ function create_config( )
 		"groupmanager",
 		"aparat",
 		"cda",
+		"del",
 		"cleanbots",
 		"core",
 		"delall",
