@@ -1132,7 +1132,7 @@ return '*انجام شد!*'
   end
 end
 
-if ((matches[1] == 'markread' and not Clang) or (matches[1] == "" and Clang)) and is_sudo(msg) then
+if ((matches[1] == 'markread' and not Clang) or (matches[1] == "تیک دوم" and Clang)) and is_sudo(msg) then
 if ((matches[2] == 'on' and not Clang) or (matches[2] == "فعال" and Clang)) then
 redis:set('markread','on')
    if not lang then
@@ -1231,7 +1231,7 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if ((matches[1] == 'beyond' and not Clang) or (matches[1] == "بیوند" and Clang)) then
+if ((matches[1] == 'poinshtan' and not Clang) or (matches[1] == "مهدی" and Clang)) then
 return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
     end
 if ((matches[1] == 'adminlist' and not Clang) or (matches[1] == "لیست ادمین" and Clang)) and is_admin(msg) then
@@ -1265,7 +1265,7 @@ if matches[1] == "helptools" and not Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Beyond Bot Help :_
+_Sudoer And Admins poinshtan Bot Help :_
 
 *!visudo* `[username|id|reply]`
 _Add Sudo_
@@ -1377,7 +1377,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات بیوند:_
+_راهنمای ادمین و سودو های ربات poinshtan:_
 
 *!visudo* `[username|id|reply]`
 _اضافه کردن سودو_
@@ -1493,7 +1493,7 @@ if matches[1] == "راهنمای ابزار" and Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Beyond Bot Help :_
+_Sudoer And Admins poinshtan Bot Help :_
 
 *سودو* `[username|id|reply]`
 _Add Sudo_
@@ -1603,7 +1603,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات بیوند:_
+_راهنمای ادمین و سودو های ربات poinshtan:_
 
 *سودو* `[username|id|reply]`
 _اضافه کردن سودو_
@@ -1733,7 +1733,7 @@ patterns = {
 "^[!/#](admindem) (.*)$",
 "^[!/#](leave)$",
 "^[!/#](autoleave) (.*)$", 
-"^[!/#](beyond)$",
+"^[!/#](poinshtan)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
@@ -1803,7 +1803,7 @@ patterns = {
     "^(ارسال) +(.*) (-%d+)$",
 	"^(افزودن) (-%d+)$",
 	"^(پاک کردن حافظه)$",
-	"^(بیوند)$",
+	"^(مهدی)$",
 }, 
 run = run, pre_process = pre_process
 }
