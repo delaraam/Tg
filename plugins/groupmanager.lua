@@ -27,13 +27,13 @@ end
       whitelist ={},
       settings = {
           set_name = msg.to.title,
-          lock_link = 'yes',
-          lock_tag = 'yes',
-          lock_spam = 'yes',
+          lock_link = 'no',
+          lock_tag = 'no',
+          lock_spam = 'no',
           lock_webpage = 'no',
           lock_markdown = 'no',
-          flood = 'yes',
-          lock_bots = 'yes',
+          flood = 'no',
+          lock_bots = 'no',
           lock_pin = 'no',
           welcome = 'no',
 		  lock_join = 'no',
@@ -3363,7 +3363,7 @@ if ((matches[1] == "whitelist" and not Clang) or (matches[1] == "لیست سفی
 return whitelist(msg.to.id)
 end
 
-if ((matches[1]:lower() == "option" and not Clang) or (matches[1] == "تنظیمات کلی" and Clang)) and is_mod(msg) then
+if ((matches[1]:lower() == "option" and not Clang) or (matches[1] == "تنظیمات شیشه ای" and Clang)) and is_mod(msg) then
 local function inline_query_cb(arg, data)
       if data.results_ and data.results_[0] then
 tdcli.sendInlineQueryResultMessage(msg.to.id, 0, 0, 1, data.inline_query_id_, data.results_[0].id_, dl_cb, nil)
@@ -3427,37 +3427,6 @@ if not lang then
 text = [[
 *poinshtan Bot Commands:*
 *~~~~~~~~~~*
-
-*!setowner* `[username|id|reply]` 
-_Set Group Owner(Multi Owner)_
-
-*!remowner* `[username|id|reply]` 
- _Remove User From Owner List_
- 
-*!ownerlist*
-_Show Group Owners List_ 
-
-*!promote* `[username|id|reply]` 
-_Promote User To Group Admin_
-
-*!demote* `[username|id|reply]` 
-_Demote User From Group Admins List_
-
-*!modlist* 
-_Show Group Moderators List_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
-*!setflood* `[1-50]`
-_Set Flooding Number_
-
-*!setchar* `[Number]`
-_Set Flooding Characters_
-
-*!setfloodtime* `[1-10]`
-_Set Flooding Time_
-
-*~~~~~~~~~~~~~~~~~~~~*
 
 *!silent* `[username|id|reply]` 
 _Silent User From Group_
@@ -3602,37 +3571,6 @@ text = [[
 _دستورات ربات poinshtan:_
 
 *~~~~~~~~~~*
-
-*!setowner* `[username|id|reply]`
-_انتخاب مالک گروه(قابل انتخاب چند مالک)_
-
-*!remowner* `[username|id|reply]`
-_حذف کردن فرد از فهرست مالکان گروه_
-
-*!ownerlist*
-_نمایش فهرست مالکان گروه_
-
-*!promote* `[username|id|reply]`
-_ارتقا مقام کاربر به مدیر گروه_
-
-*!demote* `[username|id|reply]`
-_تنزیل مقام مدیر به کاربر_
-
-*!modlist*
-_نمایش فهرست مدیران گروه_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
-*!setflood* `[1-50]`
-_تنظیم حداکثر تعداد پیام مکرر_
-
-*!setchar* `[Number]`
-_تنظیم حداکثر کاراکتر پیام مکرر_
-
-*!setfloodtime* `[1-10]`
-_تنظیم زمان ارسال پیام مکرر_
-
-*~~~~~~~~~~~~~~~~~~~~*
 
 *!silent* `[username|id|reply]`
 _بیصدا کردن کاربر در گروه_
@@ -3786,37 +3724,6 @@ text = [[
 *poinshtan Bot Commands:*
 *~~~~~~~~~~*
 
-*مالک* `[username|id|reply]` 
-_Set Group Owner(Multi Owner)_
-
-*حذف مالک* `[username|id|reply]` 
- _Remove User From Owner List_
-
- *لیست مالکان*
-_Show Group Owners List_ 
-
-*مدیر* `[username|id|reply]` 
-_Promote User To Group Admin_
-
-*حذف مدیر* `[username|id|reply]` 
-_Demote User From Group Admins List_
-
-*لیست مدیران* 
-_Show Group Moderators List_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
-*تنظیم پیام مکرر* `[1-50]`
-_Set Flooding Number_
-
-*حداکثر حروف مجاز* `[عدد]`
-_Set Flooding Characters_
-
-*تنظیم زمان بررسی* `[1-10]`
-_Set Flooding Time_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
 *سکوت* `[username|id|reply]` 
 _Silent User From Group_
 
@@ -3962,37 +3869,6 @@ text = [[
 *دستورات ربات poinshtan:*
 *~~~~~~~~~~*
 
-*مالک* `[یوزرنیم|ایدی|ریپلی]` 
-_انتخاب مالک گروه(قابل انتخاب چند مالک)_
-
-*حذف مالک* `[یوزرنیم|ایدی|ریپلی]` 
- _حذف کردن فرد از فهرست مالکان گروه_
-
- *لیست مالکان*
-_نمایش فهرست مالکان گروه_ 
-
-*مدیر* `[یوزرنیم|ایدی|ریپلی]` 
-_ارتقا مقام کاربر به مدیر گروه_
-
-*حذف مدیر* `[یوزرنیم|ایدی|ریپلی]` 
-_تنزیل مقام مدیر به کاربر_
-
-*لیست مدیران* 
-_نمایش فهرست مدیران گروه_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
-*تنظیم پیام مکرر* `[2-50]`
-_تنظیم حداکثر تعداد پیام مکرر_
-
-*حداکثر حروف مجاز* `[عدد]`
-_تنظیم حداکثر کاراکتر پیام مکرر_
-
-*تنظیم زمان بررسی* `[1-10]`
-_تنظیم زمان ارسال پیام مکرر_
-
-*~~~~~~~~~~~~~~~~~~~~*
-
 *سکوت* `[یوزرنیم|ایدی|ریپلی]` 
 _بیصدا کردن کاربر در گروه_
 
@@ -4119,7 +3995,7 @@ _ارسال لینک گروه به چت خصوصی شما_
 
 *~~~~~~~~~~~~~~~~~~~~*
 
-*تنظیمات کلی*
+*تنظیمات شیشه ای*
 _نمایش تنظیمات بصورت دکمه شیشه‌ای_
 
 *~~~~~~~~~~~~~~~~~~~~*
@@ -4221,7 +4097,7 @@ end
        if not lang then
 		return "_Welcome Message Has Been Set To :_\n*"..matches[2].."*\n\n*You can use :*\n_{gpname} Group Name_\n_{rules} ➣ Show Group Rules_\n_{name} ➣ New Member First Name_\n_{username} ➣ New Member Username_"..msg_caption
        else
-		return "_پیام خوشآمد گویی تنظیم شد به :_\n*"..matches[2].."*\n\n*شما میتوانید از*\n_{gpname} نام گروه_\n_{rules} ➣ نمایش قوانین گروه_\n_{name} ➣ نام کاربر جدید_\n_{username} ➣ نام کاربری کاربر جدید_\n_استفاده کنید_"..msg_caption
+		return "_پیام خوشآمد گویی تنظیم شد به :_\n*"
         end
      end
 	end
@@ -4373,7 +4249,7 @@ patterns ={
 "^(ایدی)$",
 "^(ایدی) (.*)$",
 '^(تنظیمات)$',
-'^(تنظیمات کلی)$',
+'^(تنظیمات شیشه ای)$',
 '^(سنجاق)$',
 '^(حذف سنجاق)$',
 '^(افزودن)$',
