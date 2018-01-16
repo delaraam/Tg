@@ -99,7 +99,8 @@ function create_config( )
 		"msg-checks",
 		"plugins",
 		"tools",
-		"fun",
+		"funn",
+		"info",
 
 	},
     sudo_users = {425771035, sudo_id},
