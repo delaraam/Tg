@@ -3425,9 +3425,39 @@ end
 if (matches[1] == "help" and not Clang) and is_mod(msg) then
 if not lang then
 text = [[
-*poinshtan Bot Commands:*
+* Bot Commands:*
 *~~~~~~~~~~*
+!setowner [username|id|reply] 
+Set Group Owner(Multi Owner)
 
+!remowner [username|id|reply] 
+ Remove User From Owner List
+ 
+!ownerlist
+Show Group Owners List 
+
+!promote [username|id|reply] 
+Promote User To Group Admin
+
+!demote [username|id|reply] 
+Demote User From Group Admins List
+
+!modlist 
+Show Group Moderators List
+
+~~~~~~~~~~~~~~~~~~~~
+
+!setflood [1-50]
+Set Flooding Number
+
+!setchar [Number]
+Set Flooding Characters
+
+!setfloodtime [1-10]
+Set Flooding Time
+
+~~~~~~~~~~~~~~~~~~~~
+				
 *!silent* `[username|id|reply]` 
 _Silent User From Group_
 
@@ -3562,15 +3592,47 @@ _You Can Use_ *[!/#]* _To Run The Commands_
 _This Help List Only For_ *Moderators/Owners!*
 _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 
-*@smoking_times*
 *Good luck ;)*]]
 
 elseif lang then
 
 text = [[
-_دستورات ربات poinshtan:_
+_دستورات ربات :_
 
 *~~~~~~~~~~*
+
+
+
+!setowner [username|id|reply]
+انتخاب مالک گروه(قابل انتخاب چند مالک)
+
+!remowner [username|id|reply]
+حذف کردن فرد از فهرست مالکان گروه
+
+!ownerlist
+نمایش فهرست مالکان گروه
+
+!promote [username|id|reply]
+ارتقا مقام کاربر به مدیر گروه
+
+!demote [username|id|reply]
+تنزیل مقام مدیر به کاربر
+
+!modlist
+نمایش فهرست مدیران گروه
+
+~~~~~~~~~~~~~~~~~~~~
+
+!setflood [1-50]
+تنظیم حداکثر تعداد پیام مکرر
+
+!setchar [Number]
+تنظیم حداکثر کاراکتر پیام مکرر
+
+!setfloodtime [1-10]
+تنظیم زمان ارسال پیام مکرر
+
+~~~~~~~~~~~~~~~~~~~~				
 
 *!silent* `[username|id|reply]`
 _بیصدا کردن کاربر در گروه_
@@ -3709,7 +3771,6 @@ _این راهنما فقط برای مدیران/مالکان گروه میبا
 
 _این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!_
 
-*@smoking_times*
 _کانالهای تیم بات سازی poinshtan_
 
 _موفق باشید_ *;)*
@@ -3721,9 +3782,41 @@ end
 if (matches[1] == "راهنما" and Clang) and is_mod(msg) then
 if not lang then
 text = [[
-*poinshtan Bot Commands:*
+*Bot Commands:*
 *~~~~~~~~~~*
 
+
+مالک [username|id|reply] 
+Set Group Owner(Multi Owner)
+
+حذف مالک [username|id|reply] 
+ Remove User From Owner List
+
+ لیست مالکان
+Show Group Owners List 
+
+مدیر [username|id|reply] 
+Promote User To Group Admin
+
+حذف مدیر [username|id|reply] 
+Demote User From Group Admins List
+
+لیست مدیران 
+Show Group Moderators List
+
+~~~~~~~~~~~~~~~~~~~~
+
+تنظیم پیام مکرر [1-50]
+Set Flooding Number
+
+حداکثر حروف مجاز [عدد]
+Set Flooding Characters
+
+تنظیم زمان بررسی [1-10]
+Set Flooding Time				
+
+~~~~~~~~~~~~~~~~~~~~
+				
 *سکوت* `[username|id|reply]` 
 _Silent User From Group_
 
@@ -3858,16 +3951,44 @@ _Set CMD Persian/English Language_
 _This Help List Only For_ *Moderators/Owners!*
 _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 
-*@smoking_times*
-_کانالهای تیم بات سازی poinshtan_
-
 *Good luck ;)*]]
 
 elseif lang then
 
 text = [[
-*دستورات ربات poinshtan:*
+*دستورات ربات :*
 *~~~~~~~~~~*
+
+مالک [یوزرنیم|ایدی|ریپلی] 
+انتخاب مالک گروه(قابل انتخاب چند مالک)
+
+حذف مالک [یوزرنیم|ایدی|ریپلی] 
+ حذف کردن فرد از فهرست مالکان گروه
+
+ لیست مالکان
+نمایش فهرست مالکان گروه 
+
+مدیر [یوزرنیم|ایدی|ریپلی] 
+ارتقا مقام کاربر به مدیر گروه
+
+حذف مدیر [یوزرنیم|ایدی|ریپلی] 
+تنزیل مقام مدیر به کاربر
+
+لیست مدیران 
+نمایش فهرست مدیران گروه
+
+~~~~~~~~~~~~~~~~~~~~
+
+تنظیم پیام مکرر [2-50]
+تنظیم حداکثر تعداد پیام مکرر
+
+حداکثر حروف مجاز [عدد]
+تنظیم حداکثر کاراکتر پیام مکرر
+
+تنظیم زمان بررسی [1-10]
+تنظیم زمان ارسال پیام مکرر
+
+~~~~~~~~~~~~~~~~~~~~				
 
 *سکوت* `[یوزرنیم|ایدی|ریپلی]` 
 _بیصدا کردن کاربر در گروه_
@@ -4037,15 +4158,8 @@ _تنظیم دستورات فارسی_
 
 *~~~~~~~~~~~~~~~~~~~~*
 
-*@Bot_helper_poinshtan*
-_کانال دستورات ربات_
-
-
 _این راهنما فقط برای مدیران/مالکان گروه میباشد!
 این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!_
-
-*@smoking_times*
-_کانالهای تیم بات سازی poinshtan_
 
 *موفق باشید ;)*]]
 end
