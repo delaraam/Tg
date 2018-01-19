@@ -1,5 +1,5 @@
 --Begin info.lua
-local Solid = owner
+local Solid = ownerID
 local function setrank(msg, user_id, value,chat_id)
   local hash = nil
 
