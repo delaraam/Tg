@@ -77,7 +77,7 @@ function save_config( )
 end
 
 function create_config( )
-	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo : 	\27[0;39;49m')
+	io.write('\n\27[1;33m>> Owner ID : 	\27[0;39;49m')
 	local sudo_id =  tonumber(io.read())
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
