@@ -21,7 +21,7 @@ if is_banned(data.id_, arg.chat_id) then
    if not lang then
 		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_User_ "..user_name.." *[ "..data.id_.." ]* _is banned_", 0, "md")
    else
-		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_کاربر_ "..user_name.." *[ "..data.id_.." ]* _از گروه محروم است_", 0, "md")
+		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "`کاربر`"..user_name.." *[ "..data.id_.." ]* `از گروه محروم است`", 0, "md")
 end
 kick_user(data.id_, arg.chat_id)
 end
@@ -29,7 +29,7 @@ if is_gbanned(data.id_) then
      if not lang then
 		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_User_ "..user_name.." *[ "..data.id_.." ]* _is globally banned_", 0, "md")
     else
-		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_کاربر_ "..user_name.." *[ "..data.id_.." ]* _از تمام گروه های ربات محروم است_", 0, "md")
+		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "`کاربر` "..user_name.." *[ "..data.id_.." ]* `از تمام گروه های ربات محروم است`", 0, "md")
    end
 kick_user(data.id_, arg.chat_id)
      end
@@ -69,21 +69,21 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_I can't ban_ *my self*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*من نمیتوانم خودم رو از گروه محروم کنم*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "`من نمیتوانم خودم رو از گروه محروم کنم`", 0, "md")
          end
      end
    if is_mod1(arg.chat_id, data.id_) then
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't ban_ *mods,owners and bot admins*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "`شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید`", 0, "md")
          end
      end
 if administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* * از گروه محروم بود*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "`کاربر` "..user_name.." *"..data.id_.."* `از گروه محروم بود`", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
@@ -92,7 +92,7 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *banned*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از گروه محروم شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "`کاربر`"..user_name.." *"..data.id_.."*`از گروه محروم شد`", 0, "md")
    end
 end
 tdcli_function ({
@@ -114,7 +114,7 @@ if not administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *banned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از گروه محروم نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "`کاربر` "..user_name.." *"..data.id_.."*`از گروه محروم نبود`", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = nil
@@ -123,7 +123,7 @@ channel_unblock(arg.chat_id, data.id_)
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *unbanned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از محرومیت گروه خارج شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "`کاربر` "..user_name.." *"..data.id_.."* `از محرومیت گروه خارج شد`", 0, "md")
    end
 end
 tdcli_function ({
@@ -145,14 +145,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_I can't silent_ *my self*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*من نمیتوانم توانایی چت کردن رو از خودم بگیرم*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "`من نمیتوانم توانایی چت کردن رو از خودم بگیرم`", 0, "md")
          end
      end
    if is_mod1(arg.chat_id, data.id_) then
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't silent_ *mods,owners and bot admins*", 0, "md")
     else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "`شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید`", 0, "md")
        end
      end
 if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
