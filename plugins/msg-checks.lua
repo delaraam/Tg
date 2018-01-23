@@ -476,11 +476,10 @@ if redis:get('sender:'..user..':flood') then
 return
 else
    del_msg(chat, msg.id)
-    kick_user(user, chat)
    if not lang then
-  tdcli.sendMessage(chat, msg.id, 0, "_User_ "..user_name.." `[ "..user.." ]` _has been_ *kicked* _because of_ *flooding*", 0, "md")
+  tdcli.sendMessage(chat, msg.id, 0, "_User_ "..user_name.."  _has been_ *kicked* _because of_ *flooding*", 0, "md")
    elseif lang then
-  tdcli.sendMessage(chat, msg.id, 0, "_کاربر_ "..user_name.." `[ "..user.." ]` _به دلیل ارسال پیام های مکرر اخراج شد_", 0, "md")
+  tdcli.sendMessage(chat, msg.id, 0, "`دوست عزیز` "..user_name.."  `ارسال پیام بصورت رگباری ممنوعه و در صورت تکرار از گروه حذف خواهید شد`", 0, "md")
     end
 redis:setex('sender:'..user..':flood', 30, true)
       end
