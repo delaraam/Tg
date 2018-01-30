@@ -100,7 +100,8 @@ function create_config( )
 		"plugins",
 		"tools",
 		"funn",
-        "info",
+                "info",
+		"gh",
 
 	},
     sudo_users = {123456789, 987654321, sudo_id},
